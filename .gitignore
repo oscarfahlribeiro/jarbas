@@ -1,0 +1,9 @@
+# Repo do Jarbas: rastrear SÓ o sistema de mentores.
+# Ignora tudo no topo e re-inclui só o que é do Jarbas — assim qualquer
+# outra skill futura nesta pasta NÃO entra neste repo por acidente.
+/*
+!/.gitignore
+!/README.md
+!/_jarbas/
+!/jarbas-*/
+!/forge-*/
