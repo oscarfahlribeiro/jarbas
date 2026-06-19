@@ -77,3 +77,10 @@
   empurrado; mostre o tradeoff e ele escolhe bem.
 - **Mostrar o artefato rodando expõe gaps** que nenhuma descrição pega — quando possível,
   subir/demonstrar antes de discutir no abstrato.
+- **Colaboração/versionamento é driver de decisão** (2026-06-18): escolheu versionar tudo em git
+  pra compartilhar com o sócio — skills do Jarbas em repo privado, artefatos do casei dentro do
+  repo. "Onde mora a coisa" ele decide por compartilhamento, não por conveniência de carregamento.
+- **Prefere enxuto (anti-bloat):** corta escopo na hora (ex.: persona+UI em vez de 4; vetou skills
+  `forge-*` vazias). Propor o mínimo viável primeiro, deixar graduar com o uso.
+- **Trabalha em janelas paralelas** — pode commitar/editar arquivos por fora durante a sessão.
+  Usar staging cirúrgico (`add` por arquivo, nunca `add -A`) e checar `git status` antes de commitar.
