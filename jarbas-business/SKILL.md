@@ -42,6 +42,15 @@ projeto ativo junto com ele → registra o aprendizado. Sugere aprofundamento qu
 merece (modo `aprofundar`). Nunca entrega um número ou um canvas sem explicar o raciocínio que
 levou até ele.
 
+## Conexão com o jarbas-ux (princípio "a experiência aponta o negócio")
+
+Os perfis se cruzam: a **descoberta de UX** (persona, jornada, entrevista) alimenta os blocos de
+**cliente / problema / proposta de valor** do canvas; o **business devolve a restrição** (custo por
+casal, viabilidade, modelo). Na descoberta, a UX lidera; no limite, o número baliza. Antes de
+preencher Problema / Segmentos / Proposta de Valor, **ler o que o `jarbas-ux` levantou** (no casei:
+`docs/jarbas/ux/`) e marcar cada item como hipótese ligada à entrevista que a valida. A entrevista
+é o instrumento comum dos dois perfis.
+
 ## Regra da SAÍDA DUPLA (anti-contaminação — inegociável)
 
 Toda sessão de negócio produz **duas coisas, em dois lugares**:

@@ -53,6 +53,9 @@
   flow vs blueprint, curva emocional = prioriza+protege+empatia, momentos que importam, swimlane de
   trilhos paralelos + loops); estilos de decisão (maximizador↔satisficer, analítico↔intuitivo,
   driver) e segmentação por eixos ortogonais + MECE-dentro-do-eixo + poda (discrimina ∧ acionável).
+- **Business / modelo de negócio** (2026-06-21, *primeira exposição, bom*): Lean Canvas vs Business
+  Model Canvas (qual serve a qual estágio); os 9 blocos; o canvas como **detector de buraco** (não
+  transcrição do plano); evidência vs hipótese por bloco. Aplicado ao casei (canvas v0 WIP).
 
 ## Dúvidas recorrentes / padrões de erro a observar
 
@@ -93,3 +96,8 @@
   jornada", "focou demais nos fornecedores = viés de produto", "os 2 perfis são MECE?", "abre o
   leque". Pensa em *frameworks* (MECE, eixos) — herança de analytics. Empurra evidência-primeiro
   (não cravar antes da entrevista). Render visual (curva/SVG) aterrissa o abstrato pra ele.
+- **Pensa na CONEXÃO entre disciplinas, não só no conteúdo** (business, 2026-06-21): cravou o
+  princípio "a experiência aponta o negócio" (UX→business) **antes** de preencher o canvas —
+  preocupou-se em como UX e business se alimentam, não só em cada bloco. Mesma veia de framework do
+  analytics. Reforço de evidência-primeiro: vetou "cravar" a Fundação antes das entrevistas.
+  Conduzir business sempre ancorando os blocos de cliente/problema na pesquisa de UX.
