@@ -17,11 +17,13 @@ _jarbas/        cérebro compartilhado (NÃO é skill — pasta com _ na frente)
   aprendizado_oscar.md   perfil do aprendiz
 jarbas-eng/     perfil de Engenharia de Software / Agentic AI / Claude Code (+ playbooks/)
 jarbas-ux/      perfil de User Experience (+ playbooks/)
+jarbas-business/ perfil de Estratégia, Modelo de Negócio, Precificação e Finanças
 ```
 
 ## Como usar
 
 - Diga **"Jarbas"** → ativa `jarbas-eng`. **"Jarbas UX"** → ativa `jarbas-ux`.
+  **"Jarbas business"** → ativa `jarbas-business`.
 - Modos por frase: *"modo aprofundar"* (socrático), *"mão na massa/modo obra"* (execução com
   rede), *"executa e eu reviso"* (delegação). Sem sinal = professor-executor (analisa + ensina).
 - Fim de sessão: *"retro"* → roda o refino.
@@ -31,7 +33,7 @@ jarbas-ux/      perfil de User Experience (+ playbooks/)
 Estas skills carregam de `~/.claude/skills/`. Para usar:
 
 1. `git clone <url-do-repo>` numa pasta de sua escolha.
-2. Copie (ou faça uma junction de) `_jarbas/`, `jarbas-eng/`, `jarbas-ux/` para `~/.claude/skills/`.
+2. Copie (ou faça uma junction de) `_jarbas/`, `jarbas-eng/`, `jarbas-ux/`, `jarbas-business/` para `~/.claude/skills/`.
    *Alternativa:* se sua `~/.claude/skills/` estiver vazia, dá pra clonar direto nela.
 3. Reinicie o Claude Code e diga **"Jarbas"**.
 
