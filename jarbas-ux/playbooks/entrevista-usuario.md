@@ -51,6 +51,19 @@ comportamental ("o que você fez da última vez?") fura essa casca e traz a dor 
   buscava mais". Sempre cheque com o comportamental.
 - **Fixar na própria tese** (viés de confirmação, acima) — o mais traiçoeiro.
 
+## Roteiro pré-estabelecido (quando precisa de escala/consistência)
+A entrevista exploratória pode ser fluida. Quando vira **plano** (vários respondentes, com
+comparabilidade), monte um roteiro com perguntas fixas — mas:
+- **Adaptativo (branching):** espinha fixa + **módulos que disparam pelo contexto** do respondente
+  (ex.: estágio na jornada) + **sondas condicionais** (só pergunta o ramo relevante). Mantém leve —
+  cada pessoa só vê o que lhe cabe.
+- **Sempre pilotar:** rode **1 piloto** antes do plano — pega pergunta confusa, indutora ou longa
+  demais antes de queimar respondentes reais.
+- **Público em grupo (casal/time):** entrevistar **cada um individualmente, mesmo roteiro**, e
+  comparar → a **divergência** vira achado sobre perfis.
+- **Não dependa de anotação:** notetaker grátis que grava+transcreve (com consentimento) > memória.
+- **Orçamento de tempo:** anote tempo-alvo por bloco; some o caminho mais longo do branching.
+
 ## Refino
 Ao terminar de usar este playbook, avalie se ele próprio deve melhorar (passo, exemplo,
 técnica, anti-padrão) e leve isso ao /retro. Se provar reuso em outro projeto, graduar pra
