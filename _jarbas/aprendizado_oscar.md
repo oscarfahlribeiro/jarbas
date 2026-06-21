@@ -48,6 +48,11 @@
 - **Arco "localhost → SaaS multi-inquilino na nuvem"** (2026-06-14, *bom*): multi-tenancy e
   propagação de contexto; AuthN vs AuthZ; SQLite vs Postgres; capacidade/sizing (usuários →
   DAU → simultâneos → req/s); migração por sinal, não por número.
+- **UX / pesquisa de produto** (2026-06-20, *bom→sólido*): proto-persona vs persona; entrevista de
+  descoberta (comportamental > opinião, viés do entrevistador); journey map (anatomia, journey vs
+  flow vs blueprint, curva emocional = prioriza+protege+empatia, momentos que importam, swimlane de
+  trilhos paralelos + loops); estilos de decisão (maximizador↔satisficer, analítico↔intuitivo,
+  driver) e segmentação por eixos ortogonais + MECE-dentro-do-eixo + poda (discrimina ∧ acionável).
 
 ## Dúvidas recorrentes / padrões de erro a observar
 
@@ -84,3 +89,7 @@
   `forge-*` vazias). Propor o mínimo viável primeiro, deixar graduar com o uso.
 - **Trabalha em janelas paralelas** — pode commitar/editar arquivos por fora durante a sessão.
   Usar staging cirúrgico (`add` por arquivo, nunca `add -A`) e checar `git status` antes de commitar.
+- **Pega buracos de método/estrutura, não só de conteúdo** (UX, 2026-06-20): apontou "faltou a
+  jornada", "focou demais nos fornecedores = viés de produto", "os 2 perfis são MECE?", "abre o
+  leque". Pensa em *frameworks* (MECE, eixos) — herança de analytics. Empurra evidência-primeiro
+  (não cravar antes da entrevista). Render visual (curva/SVG) aterrissa o abstrato pra ele.

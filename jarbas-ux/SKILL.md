@@ -52,9 +52,14 @@ Toda sessão de UX produz **duas coisas, em dois lugares**:
   conceitos organizados) de UX para um projeto. Saída → a subpasta `ux\` do projeto (via `projetos.md`).
 - `persona-building.md` — construir personas baseadas em evidência.
 - `ui-design.md` — princípios e crítica de interface.
+- `entrevista-usuario.md` — conduzir entrevista de descoberta (comportamento real, não opinião;
+  percorre a jornada no tempo → matéria-prima de persona e journey map). Gradua pra
+  `forge-entrevista` na 1ª vez que for usada em outro projeto.
+- `jornada-usuario.md` — mapear journey map (fases × emoção; swimlane de trilhos paralelos; loops
+  repetíveis; curva emocional + momentos que importam; multi-perfil). Gradua pra `forge-jornada`.
 
-*(Design Sprint e Mapeamento de Jornada entram como playbook/skill sob demanda, via `forja.md`,
-na 1ª vez que formos fazer um — anti-bloat: não semear skill vazia.)*
+*(Design Sprint entra como playbook/skill sob demanda, via `forja.md`, na 1ª vez que formos fazer
+um — anti-bloat: não semear skill vazia.)*
 
 ## Modos e fim de sessão
 
