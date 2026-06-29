@@ -7,3 +7,8 @@
 !/_jarbas/
 !/jarbas-*/
 !/forge-*/
+# Projeto "AI Onboarding" (mentor Osmar) — artefatos versionados e sincronizados.
+!/ai-onboarding/
+# Slash commands do Osmar (precisam morar em .claude/commands para o Claude Code achar).
+!/.claude/
+.claude/settings.local.json
