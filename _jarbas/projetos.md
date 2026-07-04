@@ -32,6 +32,24 @@ Material de negócio que o `jarbas-business` lê **antes de opinar** (e onde gra
 - `comparacao-funcionalidades-fornecedores.md` — análise competitiva por funcionalidade + matriz comparativa
 - `Casei_Plano_Jornadas.md` — jornadas/serviços (produto; alimenta posicionamento)
 
+## Revisões de interface (jarbas-revisao)
+
+Onde o ciclo de revisão falada guarda a APLICAÇÃO (transcrições, análises, propostas, backlog)
+e como relançar a interface de cada projeto:
+
+| Projeto | Pasta de revisões (inclui `glossario.md` e `backlog.md`) | Relançar a interface |
+|---|---|---|
+| **casei** (protótipo no DS novo) | `C:\Users\Oscar\projects\casei\docs\design\revisao frontend\` | `docs\design\prototipo\abrir.bat` (http.server 8123); server estático já serve arquivos editados → em geral basta recarregar o navegador |
+
+Insumos que o comitê lê no casei — **UX:** `docs\jarbas\ux\requisitos_jornada.md` ·
+`personas.md` · `comparativo_entrevistas.md` · `identidade_visual.md` · `requisitos_x_app.md`;
+**Código da interface:** `docs\design\prototipo\` (des-bundle do DS + `perfil.js`).
+
+## Notas da máquina (Oscar)
+
+- Python de bootstrap para venvs (o `python`/`py` global é stub da Windows Store):
+  `C:\Users\Oscar\projects\casei\.venv\Scripts\python.exe`
+
 ## As próprias skills do Jarbas
 
 Versionadas no repo do Jarbas (`git init` em `~/.claude/skills`, espelho privado no GitHub para

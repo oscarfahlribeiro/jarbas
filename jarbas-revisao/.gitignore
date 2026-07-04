@@ -1,0 +1,4 @@
+# Runtime do jarbas-revisao — nada disso vai pro repo do Jarbas
+.venv/
+state/
+gravacoes/
