@@ -96,7 +96,9 @@ Salvar em `<pasta_feedbacks>\<AAAA-MM-DD>_feedback-NN\feedback.md` (NN = próxim
 
 ## Execução
 
-1. Oscar seleciona códigos → executar as mudanças (commit só se pedir).
+1. Oscar seleciona códigos → executar as mudanças (commit só se pedir). Se ele pedir triagem
+   por complexidade, usar o modelo do `/jarbas-revisao` §5: lote **LEVE** aprovável em bloco
+   (cosmético/só-texto/fix pontual) + **ESTRUTURAIS** ordenados por criticidade 🔴🟠🟡🔵.
 2. Mudança de interface que merece o ciclo completo (trade-off, alternativa, custo) → mandar pro
    backlog do `/jarbas-revisao` e anotar isso no acumulado.
 3. Atualizar o `status` dos pontos no acumulado (`selecionado` → `executado`).

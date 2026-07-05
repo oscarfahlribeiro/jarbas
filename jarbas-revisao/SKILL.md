@@ -118,6 +118,10 @@ Produzir a **transcrição normalizada**:
   que notar (o glossário melhora a cada sessão; erros/vocabulário de projeto ficam NO projeto);
 - inferir e rotular **falantes** pelo contexto (heurística no `RAIZ\glossario.md`); na dúvida, `[?]`;
 - anotar **a que tela/seção** cada trecho se refere;
+- **conferir o estado REAL do protótipo no CÓDIGO (git status / ler os arquivos) ANTES de cravar o
+  contexto no cabeçalho** — Oscar trabalha em janelas paralelas e o código pode ter mudado embaixo
+  da revisão (ex.: outra janela já aplicou a sessão anterior). Não assumir o estado pela memória;
+  se o comitê receber uma premissa errada, o eng costuma pegar — melhor não depender disso.
 - manter timestamps.
 Salvar em `<pasta_revisoes>\<AAAA-MM-DD>_sessao-NN\transcricao.txt` (NN = próximo número livre).
 
@@ -205,14 +209,46 @@ Fundir as duas análises numa **proposta numerada** — agrupando pedidos que s�
 Regras: conflito UX×Eng → expor os dois lados e recomendar (não esconder a tensão); itens
 `[PRODUTO]` vão para a seção separada **"Requisitos de produto (fora da tela)"** com destino
 (ex.: o doc de requisitos da jornada do projeto). Salvar como `proposta.md` na pasta da sessão.
-Apresentar no chat e terminar SEMPRE com:
-**"Aprove por número (ex.: 'R1, R3-R5'), 'todos', ou ajuste o que quiser."**
+
+### Apresentar em DOIS BLOCOS por complexidade (decisão Oscar 2026-07-04)
+
+Oscar não quer ver detalhe do que é trivial — a proposta se apresenta separada:
+
+1. **Bloco LEVE — aprovação em lote.** R's que são cosmético / só-texto / fix pontual
+   **sem** decisão de design, **sem** mudança de contrato/estado e **sem** trade-off real
+   (ex.: microcopy, consistência de rótulo, cor/espacamento, bug de 1 função com causa
+   achada). Tabela curta: `R · título de 1 linha` — nada de pedido/UX/eng no chat (o
+   detalhe fica no `proposta.md` pra auditoria). Oscar aprova com uma palavra ("leves").
+   *Na dúvida entre leve×estrutural, é estrutural.*
+
+2. **Bloco ESTRUTURAL — ordenado por CRITICIDADE** (o que Oscar precisa de fato decidir),
+   cada um com o detalhe completo do template acima, nesta ordem:
+   - 🔴 **Crítico** — usuário travou/preso, sistema mente (dado/estado errado), perde dado,
+     quebra a jornada;
+   - 🟠 **Alto** — afeta conversão ou o fluxo principal da experiência;
+   - 🟡 **Médio** — mexe em contrato de dado, estado ou estrutura (front↔back);
+   - 🔵 **Design/decisão** — naming, identidade, direção visual: barato de executar,
+     mas a PALAVRA é do Oscar.
+
+Fecho SEMPRE com:
+**"Aprove: 'leves' (o lote todo), + estruturais por número (ex.: 'leves, R3, R7'), 'todos', ou ajuste o que quiser."**
 
 ## 6 · EXECUTAR + RELANÇAR
 
-1. Aplicar **só os aprovados** (edições normais; commit só se Oscar pedir).
+1. Aplicar **só os aprovados** — primeiro o lote LEVE inteiro (rápido, verificação junta),
+   depois os ESTRUTURAIS na ordem de criticidade (🔴 antes de 🔵). Commit só se Oscar pedir.
 2. **Relançar a interface**: comando por projeto no `projetos.md` (server estático já serve os
    arquivos editados → muitas vezes basta recarregar o navegador; iniciar se não estiver rodando).
+   > ⚠️ **Verificar a mudança (lição 2026-07-04, custou muitos ciclos):**
+   > - **Cache do navegador:** recarregar pode NÃO pegar a edição — o preview cacheia os scripts
+   >   (Babel/JS) agressivamente. Confirmar o que o server entrega com
+   >   `fetch('arquivo.js?bust='+Math.random())`; para forçar o navegador, versionar os
+   >   `<script src="...?v=sN">` temporariamente (e limpar depois).
+   > - **`preview_screenshot` dá timeout** na tela com motion/scroll-spy rodando. Verificação por
+   >   **`preview_eval` (geometria/estado do DOM)** é mais confiável que a imagem; usar screenshot
+   >   só para a prova visual final.
+   > - Rodar por FILE-fanout (um subagente por arquivo sem sobreposição) é o padrão que funcionou;
+   >   depois verificar centralizado, e o consolidador corrige os bugs de texto/layout que sobrarem.
 3. Atualizar `<pasta_revisoes>\backlog.md`: cada R vira uma linha com status —
    `✅ feito · 👍 aprovado-pendente · ❌ rejeitado · ⏸ adiado · 🔁 recorrente` — e a sessão de origem.
 4. Convidar: "quando quiser, `/jarbas-revisao` pro próximo ciclo."
