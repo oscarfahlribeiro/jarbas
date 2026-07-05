@@ -45,6 +45,18 @@ Insumos que o comitê lê no casei — **UX:** `docs\jarbas\ux\requisitos_jornad
 `personas.md` · `comparativo_entrevistas.md` · `identidade_visual.md` · `requisitos_x_app.md`;
 **Código da interface:** `docs\design\prototipo\` (des-bundle do DS + `perfil.js`).
 
+## Feedbacks de usuários (jarbas-feedback)
+
+Onde o ciclo de feedback de usuários reais guarda a aplicação (relatórios anonimizados +
+acumulado; **transcrições/mídia ficam FORA do git — LGPD**):
+
+| Projeto | Pasta de feedbacks |
+|---|---|
+| **casei** | `C:\Users\Oscar\projects\casei\docs\design\feedback usuarios\` |
+
+Glossário: o **mesmo** das revisões (`…\docs\design\revisao frontend\glossario.md`).
+Mapa de páginas do app: o protótipo em `docs\design\prototipo\`.
+
 ## Notas da máquina (Oscar)
 
 - Python de bootstrap para venvs (o `python`/`py` global é stub da Windows Store):
