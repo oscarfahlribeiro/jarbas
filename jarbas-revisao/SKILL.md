@@ -169,6 +169,9 @@ interface de {PROJETO}.
 PREPARO (leia antes):
 1. C:\Users\Oscar\.claude\skills\jarbas-eng\SKILL.md e C:\Users\Oscar\.claude\skills\_jarbas\persona.md.
 2. O CÓDIGO da interface: {CODIGO} — e os princípios/arquitetura do projeto em {DOCS_TECNICOS}.
+3. Os artefatos de ARQUITETURA do projeto ({ARQUITETURA} — princípios + mapa do sistema, via
+   projetos.md § Arquitetura): pedido que viole um princípio → aponte a violação e desenhe a
+   alternativa aderente; pedido que crie integração/persistência nova → sinalize [ARQ] p/ gate.
 
 TAREFA — para cada pedido da transcrição abaixo:
 - **Onde vive no código** (arquivo:linha) e o que exatamente seria alterado.
@@ -266,6 +269,13 @@ Combina com o fluxo ARQUIVOS: `/jarbas-revisao rapido <arquivos>`.
    `_jarbas/projetos.md` § *Notas da máquina*).
 2. `RAIZ\.venv\Scripts\python.exe -m pip install -r RAIZ\requirements.txt` (~2–4 min).
 3. O modelo Whisper `small` baixa ~460 MB no 1º uso (cache HuggingFace, compartilhado entre venvs).
+
+## 8b · Gate de arquitetura
+
+Item R (ou execução) que **integra partes, persiste dado novo, adiciona dependência ou muda
+contrato** → antes de executar: consultar princípios + mapa do sistema do projeto
+(`projetos.md` § *Arquitetura*); decisão não-óbvia → convocar o **jarbas-arquiteto**;
+decisão estrutural → ADR + mapa atualizado na mesma sessão (paridade de registro).
 
 ## 9 · Convenções
 

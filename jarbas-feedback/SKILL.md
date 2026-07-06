@@ -101,6 +101,9 @@ Salvar em `<pasta_feedbacks>\<AAAA-MM-DD>_feedback-NN\feedback.md` (NN = próxim
    (cosmético/só-texto/fix pontual) + **ESTRUTURAIS** ordenados por criticidade 🔴🟠🟡🔵.
 2. Mudança de interface que merece o ciclo completo (trade-off, alternativa, custo) → mandar pro
    backlog do `/jarbas-revisao` e anotar isso no acumulado.
+2b. Mudança **estrutural** (integra partes, persiste dado novo, muda contrato) → **gate de
+   arquitetura** antes de executar: princípios + mapa do projeto (`projetos.md` § *Arquitetura*);
+   não-óbvio → convocar o jarbas-arquiteto.
 3. Atualizar o `status` dos pontos no acumulado (`selecionado` → `executado`).
 
 ## Convenções

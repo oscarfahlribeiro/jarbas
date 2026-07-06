@@ -45,6 +45,18 @@ Insumos que o comitê lê no casei — **UX:** `docs\jarbas\ux\requisitos_jornad
 `personas.md` · `comparativo_entrevistas.md` · `identidade_visual.md` · `requisitos_x_app.md`;
 **Código da interface:** `docs\design\prototipo\` (des-bundle do DS + `perfil.js`).
 
+## Arquitetura (jarbas-arquiteto)
+
+Onde vivem os artefatos de arquitetura de cada projeto (mapa do sistema, princípios, ADRs,
+políticas, fluxo de consulta) — o arquiteto lê e escreve SÓ por aqui:
+
+| Projeto | Pasta de arquitetura | Estágio atual |
+|---|---|---|
+| **casei** | `C:\Users\Oscar\projects\casei\docs\arquitetura\` | **MVP** (meta 1000 usuários até fim de 2026) |
+
+O gate de arquitetura para sessões sem jarbas vive no `CLAUDE.md` da raiz do projeto.
+O índice "quem lê o quê por fase" é o `fluxo_consulta.md` dessa pasta.
+
 ## Feedbacks de usuários (jarbas-feedback)
 
 Onde o ciclo de feedback de usuários reais guarda a aplicação (relatórios anonimizados +
