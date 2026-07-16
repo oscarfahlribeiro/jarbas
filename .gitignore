@@ -7,3 +7,6 @@
 !/_jarbas/
 !/jarbas-*/
 !/forge-*/
+# Exceção deliberada (2026-07-15): /area é o runtime dos gestores de área do casei
+# (não é mentor, mas este repo é o canal de distribuição de skills p/ o sócio).
+!/area/
