@@ -127,6 +127,12 @@ Salvar em `<pasta_revisoes>\<AAAA-MM-DD>_sessao-NN\transcricao.txt` (NN = próxi
 
 ## 4 · COMITÊ — dois subagentes em paralelo (uma mensagem, duas chamadas Agent)
 
+**Verificação empírica em paralelo (lição s08/casei):** pedido de "verifique X" na
+transcrição → a sessão principal verifica EMPIRICAMENTE (banco/logs/HTTP, read-only)
+ENQUANTO o comitê analisa — e na consolidação **evidência empírica > leitura de código**
+(na s08 o eng leu no código "a demanda é criada" e o SELECT no staging provou que não
+nascia: bug de dialeto invisível na suíte).
+
 Preencher `{…}` com os caminhos do `projetos.md` e a transcrição normalizada.
 
 **Subagente UX** (`subagent_type: general-purpose`):
