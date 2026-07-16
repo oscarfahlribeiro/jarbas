@@ -48,8 +48,12 @@ outros: `plano.json` é **síntese analítica**, regerada por inteiro (não é d
    das ÁREAS, cada ação com campo `area` OBRIGATÓRIO + tipo 9-MECE, complexidade, prioridade,
    `prompt_sessao` pronto; ação órfã = gap de governança, não categoria). Nomear a TENSÃO
    quando houver. **Gap novo nasce com campo `area`** (dono = gestor; sem dona → Governo).
-4. **Gerar**: `python docs/cogna/gerar_torre.py` (a torre lê `plano.json` na aba Hoje).
-5. **Relatório a Oscar**: as 3–5 ações recomendadas do dia (id + título), o que mudou desde o
+4. **Pendências do Oscar** (se o projeto tiver o artefato — casei: `fonte/pendencias_oscar.json`,
+   contrato no LEIAME do cogna): re-varrer as fontes (backlogs/roadblocks das áreas, ADRs
+   propostos, trackers, gaps com dono) e reescrever o JSON — baixar como `"resolvida"` o que
+   os commits/decisões fecharam. A seção da aba Hoje envelhece sem isso (criada 2026-07-16).
+5. **Gerar**: `python docs/cogna/gerar_torre.py` (a torre lê `plano.json` na aba Hoje).
+6. **Relatório a Oscar**: as 3–5 ações recomendadas do dia (id + título), o que mudou desde o
    último cockpit (ações fechadas, frentes que avançaram), e a tensão/foco. Oferecer abrir a torre.
 
 Regras próprias: prioridade ancorada no **plano de trabalho corrente** (hoje = MVP; o que destrava
