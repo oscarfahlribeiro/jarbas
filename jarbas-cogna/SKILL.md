@@ -17,7 +17,7 @@ Em `<repo>/docs/cogna/`:
 
 | Peça | Papel |
 |---|---|
-| `fonte/*.json` | Artefatos canônicos: `tabelas` · `usos` · `linhagem` · `modulos` · `superficies` · `servicos` · `glossario` · `docs` · `diario` · `gaps` · **`plano`** (o cockpit diário — aba ☕ Hoje) · **`amostras`** (10 linhas anonimizadas por tabela). **Contratos de forma: `LEIAME.md` do próprio diretório.** |
+| `fonte/*.json` | Artefatos canônicos: `tabelas` · `usos` · `linhagem` · `modulos` · `superficies` · `servicos` · `glossario` · `docs` · `diario` · `gaps` · **`plano`** (o cockpit diário — aba ☕ Hoje) · **`amostras`** (10 linhas anonimizadas por tabela) · **`areas`** (governança por área — gerado por script varrendo `docs/areas/` a cada geração, NÃO é extraído por LLM; alimenta a aba Áreas e o runtime `/area`). **Contratos de forma: `LEIAME.md` do próprio diretório.** |
 | `cogna.config.json` | Mapa artefato → arquivos-fonte (globs) + granularidade de atualização |
 | `manifest.json` | Commit/data da última geração — a âncora do incremental |
 | `gerar_torre.py` | Montador determinístico (stdlib, $0): JSONs + .md do repo → `torre.html`. Flags: `--consolidar` (funde parciais) · `--amostras` (lê `casei.db` local e reescreve `amostras.json`) |
@@ -33,16 +33,21 @@ Disparado por `/jarbas-cogna hoje` (ou "cockpit", "rotina", "plano do dia"). Dif
 outros: `plano.json` é **síntese analítica**, regerada por inteiro (não é diff de arquivo).
 
 1. **Ler o estado**: `fonte/gaps.json` + `fonte/diario.json` (já extraídos — não re-varrer código),
+   `fonte/areas.json` + `docs/areas/*/kpis.json` (governança por área: **roadblock vencido,
+   retro armada — ≥3 dores novas ou 30 dias — e KPI fora da meta entram nos alertas do café**),
    `docs/jarbas/plano_mvp_full.md` (roadmap D1–D24) e `plano_evolucao.md`, e o git REAL
    (`git status --porcelain`, `git branch` + último commit por branch, `git log --all -30`).
 2. **Ler o `plano.json` anterior** (se existir): preservar ações ainda abertas; as que os
    commits novos resolveram, remover ou rebaixar; manter a numeração estável quando der.
-3. **Sintetizar** seguindo o contrato do `LEIAME.md` (§ plano.json): `cafe_do_dia` (onde estamos,
-   marco atual, foco, `recomendacao_hoje` realista p/ ~2h, nota), `marcos` (status real do D1–D24),
-   `frentes` (por branch/tema: ativa/encerrada/pausada/nao_integrada + relação com o MVP),
-   `acoes` (25–40, cada uma com tipo dos **9 MECE**, complexidade, prioridade ancorada no plano,
-   origem rastreável, e o **`prompt_sessao` pronto para colar**). Nomear a TENSÃO quando houver
-   (ex.: plano manda auth, mas as frentes recentes foram galpão/UX).
+3. **Sintetizar** seguindo o contrato do `LEIAME.md` (§ plano.json v2 — a página Hoje responde
+   TRÊS perguntas): `cafe_do_dia` + `marcos` (**Onde estamos?** — a rota D1–D24);
+   `acontecendo` (**O que está acontecendo?** — `frentes` SÓ ativas/pausadas/não-integradas
+   + encerradas DESDE O ÚLTIMO cockpit, as antigas caem — o diário conta a história; e
+   `alertas_areas` de `areas.json`+`kpis.json`: roadblock vencido, KPI fora da meta, retro
+   armada, artefato órfão); `acoes` (**O que fazer agora?** — derivadas dos backlogs "Agora"
+   das ÁREAS, cada ação com campo `area` OBRIGATÓRIO + tipo 9-MECE, complexidade, prioridade,
+   `prompt_sessao` pronto; ação órfã = gap de governança, não categoria). Nomear a TENSÃO
+   quando houver. **Gap novo nasce com campo `area`** (dono = gestor; sem dona → Governo).
 4. **Gerar**: `python docs/cogna/gerar_torre.py` (a torre lê `plano.json` na aba Hoje).
 5. **Relatório a Oscar**: as 3–5 ações recomendadas do dia (id + título), o que mudou desde o
    último cockpit (ações fechadas, frentes que avançaram), e a tensão/foco. Oferecer abrir a torre.
@@ -83,7 +88,10 @@ não confiar só no diário) — é o princípio de verificação empírica do O
    - `amostras.json`: **não é diff de arquivo** — regerar com `gerar_torre.py --amostras`
      quando o `schema.py` mudou (colunas novas) ou quando quiser o snapshot de dados atual.
      Lê o `casei.db` local (gitignored); anonimiza conforme `sensivel` (ver LEIAME § amostras).
-   - `glossario.json` / `servicos.json`: só se as fontes canônicas deles mudaram.
+   - `glossario.json` / `servicos.json`: só se as fontes canônicas deles mudaram. Cada termo
+     carrega campos de PROFUNDIDADE (`como_funciona` · `exemplo` · `caracteristicas` p/ persona)
+     e `doc_origem` (caminho de um doc de docs.json → a torre mostra "📄 Ler a fonte"). Ao criar
+     termo novo, preencher esses campos com lastro no código/doc (fidelidade), não deixar raso.
    Muitos arquivos afetados (>~15)? Paralelizar com subagentes, um por artefato.
 4. **Gerar**: `python docs/cogna/gerar_torre.py` (SEM `--consolidar` — consolidar
    sobrescreveria os canônicos com parciais velhos).
